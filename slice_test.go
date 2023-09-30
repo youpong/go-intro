@@ -34,10 +34,10 @@ func (p *path) TruncateAtFinalSlash() {
 	}
 }
 
-func (p path) ToUpper() {
-	for i, e := range p {
+func (p *path) ToUpper() {
+	for i, e := range *p {
 		if 'a' <= e && e <= 'z' {
-			p[i] = e + 'A' - 'a'
+			(*p)[i] = e + 'A' - 'a'
 		}
 	}
 }
