@@ -21,3 +21,17 @@ func TestToUpper(t *testing.T) {
 		t.Errorf("")
 	}
 }
+
+func TestInsert(t *testing.T) {
+	slice := make([]int, 5, 10)
+	for i := range slice {
+		slice[i] = i
+	}
+	slice = intro.Insert(slice, 2, 99)
+
+	for i, e := range []int{0, 1, 99, 2, 3, 4} {
+		if slice[i] != e {
+			t.Errorf("slice[%d] == %d, but want %d\n", i, slice[i], e)
+		}
+	}
+}
