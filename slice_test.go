@@ -35,3 +35,19 @@ func TestInsert(t *testing.T) {
 		}
 	}
 }
+
+func TestDelete(t *testing.T) {
+	slice := make([]int, 5)
+	for i := range slice {
+		slice[i] = i
+	}
+	v, slice := intro.Delete(slice, 2)
+	if v != 2 {
+		t.Errorf("v == %d, but want %d\n", v, 2)
+	}
+	for i, e := range []int{0, 1, 3, 4} {
+		if slice[i] != e {
+			t.Errorf("slice[%d] == %d, but want %d\n", i, slice[i], e)
+		}
+	}
+}

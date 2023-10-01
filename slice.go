@@ -36,3 +36,10 @@ func Insert(slice []int, index, value int) []int {
 	// Return the result.
 	return slice
 }
+
+func Delete(slice []int, index int) (int, []int) {
+	v := slice[index]
+	copy(slice[index:], slice[index+1:])
+	slice = slice[:len(slice)-1]
+	return v, slice
+}
