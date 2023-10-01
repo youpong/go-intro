@@ -1,4 +1,4 @@
-package main_test
+package intro_test
 
 import (
 	"reflect"
@@ -78,8 +78,7 @@ func TestStructEquivalent(t *testing.T) {
 }
 
 func TestAaa(t *testing.T) {
-	var p *profile
-	p = new(profile)
+	p := new(profile)
 	p.Name = "Senda"
 	p.Age = 22
 

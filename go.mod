@@ -1,3 +1,3 @@
-module example.com/m
+module github.com/youpong/go-intro
 
-go 1.20
+go 1.21.1
