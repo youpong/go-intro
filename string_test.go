@@ -20,7 +20,7 @@ func TestCompare(t *testing.T) {
 
 func TestCompre2(t *testing.T) {
 	var zero string
-	if zero == "" {
+	if zero != "" {
 		t.Errorf("compare zero and empty")
 	}
 }
